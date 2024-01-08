@@ -3,6 +3,7 @@ from pydantic import BaseModel
 import os
 import shutil
 import asyncio
+import requests
 from git import Repo
 
 app = FastAPI()
