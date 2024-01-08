@@ -16,7 +16,7 @@ async def get_main():
 async def sendMsg(background_tasks: BackgroundTasks):
     payload = {
         'token': 'ah9rsvq9qmza47o3hj9nh83fqk6uuj',
-        'user': 'ucvybysmpj5qmuu4ngip6hm1fh6e1x',
+        'user': 'gkx6543yrgir8ka7ny6k8ebjyvib66',
         'message': '您有新的家族红包'
     }
 
