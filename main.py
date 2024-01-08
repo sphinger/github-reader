@@ -17,6 +17,19 @@ async def get_main():
     return {"message": "Welcome to Code Reader!"}
 
 
+
+@app.get("/redpack")
+async def sendMsg():
+    url = 'https://api.pushover.net/1/messages.json'
+    payload = {
+        'token': 'ah9rsvq9qmza47o3hj9nh83fqk6uuj',
+        'user': 'ucvybysmpj5qmuu4ngip6hm1fh6e1x',
+        'message': '您有新的家族红包'
+    }
+
+    response = requests.post(url, data=payload)
+    return response.json()
+
 @app.post("/get-repo-content/")
 async def print_repo_url(repo: GitRepo):
     git_url = repo.git_url
