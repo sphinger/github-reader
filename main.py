@@ -8,7 +8,10 @@ async def send_pushover_message_in_background(payload):
     async with httpx.AsyncClient() as client:
         response = await client.post(url, data=payload)
         print(response.json())  # 将调用结果输出到控制台
-
+@app.get("/")
+async def get_main():
+    return {"message": "Welcome!"}
+    
 @app.get("/redpack")
 async def sendMsg(background_tasks: BackgroundTasks):
     payload = {
